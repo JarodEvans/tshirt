@@ -1,26 +1,47 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Montserrat:wght@100;200&display=swap');
+
+:root {
+    --primary-dark: #5651e5;
+    --primary-light: #709dff;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.icon {
+    color: var(--primary-dark);
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer base{
+    html {
+        font-family: Combo, system-ui, sans-serif;
+      }
+    body {
+        @apply font-[Combo]
+    }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    li {
+        @apply p-4
+    }
+
+    h1 {
+        @apply text-3xl md:text-4xl font-bold
+    }
+
+    h2 {
+        @apply text-3xl font-bold
+    }
+
+    h3 {
+        @apply text-xl font-bold
+    }
+
+    button {
+        @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md
+    }
+
+    .icon {
+        @apply text-2xl cursor-pointer
+    }
 }
