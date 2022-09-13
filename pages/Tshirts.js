@@ -1,11 +1,17 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Welcome from '../components/Welcome';
+import Tshirts from '../components/Tshirts';
 import jordans from '../assets/jordans.avif';
 
-export default function Tshirt() {
-    return (
-        <Welcome heading='Tshirts' message='Search products.' image={jordans} />
-    )
-  }
+ const tshirts = () => {
+    return ( 
+        <div>
+            <Welcome heading="Tshirts" message="Search products." image={jordans} searchBar="Search T-shirts"/>
+            <Tshirts />
+        </div>
+     );
+ }
+  
+ export default tshirts;
+
+

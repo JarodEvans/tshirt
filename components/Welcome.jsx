@@ -8,12 +8,12 @@ import {AiOutlineSearch} from 'react-icons/ai';
 //heading - First Class Products
 //message - Ethical Sourcing Locations Worldwide
 
-const Welcome = ({heading, message, image}) => {
+const Welcome = ({heading, message, image, searchBar}) => {
   const messageDefault = "Ethical Sourcing Locations Worldwide";
   const headingDefault = "First Class Products";
   return (
     <div className="w-full h-screen relative">
-      <Image src={image? image:blacktshirt} layout="fill" objectFit="cover" className="w-full h-full" />
+      <Image src={image? image:blacktshirt} alt="/" layout="fill" objectFit="cover" className="w-full h-full" />
       <div className="absolute w-full h-full top-0 left-0 bg-gray-900/30">
         <div className="absolute top-0 w-full h-full flex flex-col justify-center text-center text-white p-4">
           <h1>{heading? heading:headingDefault}</h1>
@@ -23,7 +23,7 @@ const Welcome = ({heading, message, image}) => {
               <input
                 className="bg-transparent w-[300px] sm:w-[400px] font-[Sans-serif] focus:outline-none"
                 type="text"
-                placeholder="Search Designs"
+                placeholder={searchBar? searchBar:"Search Designs"}
               ></input>
             </div>
             <div>

@@ -21,10 +21,10 @@ const Navbar = () => {
           <h1 className={logo ? 'hidden' : 'block'}>Tshirt</h1>
         </div>
         <ul className="hidden md:flex space-x-10">
-          <li to="/">Home</li>
-          <li ><Link href="/Tshirts">T-Shirts</Link></li>
-          <li>Future Projects</li>
-          <li>Contacts</li>
+          <li ><Link href="/">Home</Link></li>
+          <li ><Link href="/tshirts">T-Shirts</Link></li>
+          <li ><Link href="/future-projects">Future Projects</Link></li>
+          <li ><Link href="/contact">Contacts</Link></li>
         </ul>
         {/* Hamburger */}
         <div onClick={handleNav} className="md:hidden z-10">
@@ -39,10 +39,10 @@ const Navbar = () => {
           <div>
             <ul>
               <h1>Menu</h1>
-              <li className="border-b">Home</li>
-              <li className="border-b">TShirts</li>
-              <li className="border-b">Future Projects</li>
-              <li className="border-b">Contacts</li>
+              <li className="border-b"><Link href="/">Home</Link></li>
+              <li className="border-b"><Link href="/tshirts">T-Shirts</Link></li>
+              <li className="border-b"><Link href="/future-projects">Future Projects</Link></li>
+              <li className="border-b"><Link href="/contact">Contacts</Link></li>
             </ul>
           </div>
         </div>
