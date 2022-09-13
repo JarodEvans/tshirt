@@ -4,14 +4,20 @@ import store2 from '../assets/store2.avif'
 import Image from 'next/image';
 import {AiOutlineSearch} from 'react-icons/ai';
 
-const Welcome = () => {
+//blackshirt - image
+//heading - First Class Products
+//message - Ethical Sourcing Locations Worldwide
+
+const Welcome = ({heading, message, image}) => {
+  const messageDefault = "Ethical Sourcing Locations Worldwide";
+  const headingDefault = "First Class Products";
   return (
     <div className="w-full h-screen relative">
-      <Image src={blacktshirt} layout="fill" objectFit="cover" className="w-full h-full" />
+      <Image src={image? image:blacktshirt} layout="fill" objectFit="cover" className="w-full h-full" />
       <div className="absolute w-full h-full top-0 left-0 bg-gray-900/30">
         <div className="absolute top-0 w-full h-full flex flex-col justify-center text-center text-white p-4">
-          <h1>First Class</h1>
-          <h2 className="py-4">Ethical Sourcing Locations Worldwide</h2>
+          <h1>{heading? heading:headingDefault}</h1>
+          <h2 className="py-4">{message? message:messageDefault}</h2>
           <form className="flex justify-between items-center max-w-[700px] mx-auto w-full border p-1 rounded-md text-black bg-gray-100/90">
             <div>
               <input

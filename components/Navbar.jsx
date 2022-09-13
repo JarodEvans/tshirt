@@ -21,8 +21,8 @@ const Navbar = () => {
           <h1 className={logo ? 'hidden' : 'block'}>Tshirt</h1>
         </div>
         <ul className="hidden md:flex space-x-10">
-          <li>Home</li>
-          <li>T-Shirts</li>
+          <li to="/">Home</li>
+          <li ><Link href="/Tshirts">T-Shirts</Link></li>
           <li>Future Projects</li>
           <li>Contacts</li>
         </ul>
